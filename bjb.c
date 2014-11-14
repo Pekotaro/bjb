@@ -3,21 +3,18 @@
 #include <string.h>
 #include <time.h>
 int main(void) {
-
     char bjb_element[4][8] = {"ÎÞ","Ý","¼Þ®","³Þ¨"},
          bjb_valid[6][8] = {"¼Þ®","Ý","ÎÞ","Ý","¼Þ®","³Þ¨"},
          ret[6][8] = {"","","","","",""};
-    int  rand = 0, head = 0, i = 0;
+    int  random = 0, head = 0, i = 0;
     
     srand((unsigned)time(NULL));
     while(1){
-        rand = rand() % 4;
-        printf("%s", bjb_element[rand]);
-        memcpy(ret[(head + 5) % 6],bjb_element[rand], 8);
+        random = rand() % 4;
+        printf("%s", bjb_element[random]);
+        memcpy(ret[(head + 5) % 6],bjb_element[random], 8);
         if(memcmp(ret[head], bjb_valid[0], (6 - head) * 8 ) == 0
-            && ( head == 0 || memcmp(ret[0], bjb_valid[6 - head], head * 8 ) == 0)){
-            break;
-        }
+            && ( head == 0 || memcmp(ret[0], bjb_valid[6 - head], head * 8 ) == 0)) break;
         head = ++i % 6;
     }
     printf("\r\n%d bonjobi!!\r\n", i);
