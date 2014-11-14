@@ -17,7 +17,7 @@ int main(void) {
             && ( head == 0 || memcmp(ret[0], bjb_valid[6 - head], head * 8 ) == 0)) break;
         head = ++i % 6;
     }
-    printf("\r\n%d bonjobi!!\r\n", i);
+    printf("\r\n%d Bon Jovis\r\n", i);
     printf("＿人人人人人人人人人人人人人人＿\r\n");
     printf("＞　You Give Love a Bad Name　＜\r\n");
     printf("￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^￣\r\n");
