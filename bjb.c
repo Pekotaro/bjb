@@ -14,7 +14,7 @@ int main(void) {
     
     srand((unsigned)time(NULL));
     while(1){
-        random = rand() % (LEN(elements));
+        random = rand() % LEN(elements);
         printf("%s", elements[random]);
         memcpy(result[head], elements[random], MAX_E_SIZE);
         head = ++i % LEN(result);
