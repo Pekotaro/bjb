@@ -19,7 +19,8 @@ int main(void) {
         memcpy(result[head], elements[random], MAX_E_SIZE);
         head = ++i % LEN(result);
         if(memcmp(result[head], valid_result[0], (LEN(result) - head) * MAX_E_SIZE ) == 0
-           &&  memcmp(result[0], valid_result[LEN(result) - head], head * MAX_E_SIZE ) == 0) break;
+           &&  memcmp(result[0], valid_result[LEN(result) - head], head * MAX_E_SIZE ) == 0)
+	    break;
     }
     printf("\r\n%d Bon Jovis\r\n", i);
     printf("＿人人人人人人人人人人人人人人＿\r\n");
