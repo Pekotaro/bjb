@@ -12,7 +12,7 @@ int main(void) {
          separator[MAX_E_SIZE] = "¥",
          *random_element;
     char result[LEN(valid_result)][MAX_E_SIZE];
-    unsigned int random = 0, head = 0, i = 0;
+    unsigned int head = 0, i = 0;
     
     srand((unsigned)time(NULL));
     while(1){
